@@ -47,24 +47,24 @@
             <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../books">Books</a>
+            <a class="nav-link" href="../Book">Books</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">            
-            <a class="dropdown-item"  href="../users">All Users</a>
-			<a  class="dropdown-item" href="../orders">All Orders</a>
+            <a class="dropdown-item"  href="../User">All Users</a>
+			<a  class="dropdown-item" href="../Order">All Orders</a>
             </div>
           </li>
           
           
           <c:if  test="${LOGGED_IN_USER!=null}">
           <li class="nav-item">
-            <a class="nav-link" href="../orders/myorders">My Orders</a>
+            <a class="nav-link" href="../Order/myorders">My Orders</a>
            
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="../orders/cart">Cart</a>
+            <a class="nav-link" href="../Order/cart">Cart</a>
            </li>
            
           </c:if>
@@ -72,8 +72,8 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">            
-            <a class="dropdown-item"  href="../users">All Users</a>
-			<a  class="dropdown-item" href="../orders">All Orders</a>
+            <a class="dropdown-item"  href="../User">All Users</a>
+			<a  class="dropdown-item" href="../Order">All Orders</a>
             </div>
           </li>
           </c:if>
@@ -83,15 +83,15 @@
          <c:if  test="${!empty LOGGED_IN_USER}">
          <li class="nav-item"><a class="nav-link"> Welcome ${LOGGED_IN_USER.name} </a></li>
           <li class="nav-item">
-            <a class="nav-link" href="../auth/logout">Logout</a>
+            <a class="nav-link" href="../Book/logout">Logout</a>
           </li>
           </c:if>
           
           
         </ul>
          <c:if  test="${empty LOGGED_IN_USER}">
-       	  	 <a  href="../auth/login" class="btn btn-primary">Login</a>
-        	 <a  href="../auth/register" class="btn btn-success">Register</a>
+       	  	 <a  href="../User/login" class="btn btn-primary">Login</a>
+        	 <a  href="../User/register" class="btn btn-success">Register</a>
          </c:if>
       </div>
       
